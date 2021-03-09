@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Notepad</title>
+     <link class = 'style-page' rel="stylesheet" href="../../public/styles/default-style.css">
+     <link rel="icon" href="../../public/assets/favicon.svg">
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous" defer></script>
+     <script src="../../public/scripts/note.js" defer></script>
+</head>
+<body>
+    <div class = "text-changes">
+        <div class="text-styles">
+            <button class = "bold">
+                <img src="../../public/assets/bold.svg">
+            </button>
+            <button class = "italic">
+                <img src="../../public/assets/italic.svg">
+            </button>
+            <button class = "underline">
+                <img src="../../public/assets/underline.svg">
+            </button>
+        </div>
+
+        <div class="text-positions">
+            <button class = "justifyFull">
+                <img src="../../public/assets/justify.svg">
+            </button>
+            <button class = "justifyCenter">
+                <img src="../../public/assets/center-align.svg">
+            </button>
+            <button class = "justifyRight">
+                <img src="../../public/assets/right-align.svg">
+            </button>
+            <button class = "justifyLeft">
+                <img src="../../public/assets/left-align.svg">
+            </button>
+        </div>
+    </div>
+
+    <div class = "note">
+        <header class="title">
+        </header>
+        <main class="text-box" contenteditable="true" spellcheck = "false">
+            
+        </main>
+    </div>
+    
+    <button class = "change-theme"></button>
+</body>
+</html>

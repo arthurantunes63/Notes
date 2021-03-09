@@ -1,0 +1,110 @@
+:root {
+    --siteColor: #F1CDD5;
+    --buttonColor: #8E82BF;
+    --noteColor: #CDB5F5;
+    --shadowNote: #8E82BFBB -10px 10px, #8E82BF90 -15px 15px, #8E82BF70 -20px 20px, #8E82BF50 -25px 25px, #8E82BF30 -30px 30px;
+    --filterImgButton: none;
+    --modeIcon: url("../assets/moon.svg");
+    --noteTextColor: black;
+    --buttonTransitionColor: darkslateblue;
+    --buttonPressedColor: #262138;
+}
+
+.dark-mode:root {
+    --siteColor: #121212;
+    --buttonColor: #5F369B;
+    --noteColor: #1c1c1c;
+    --shadowNote: #5F369BBB -10px 10px, #5F369B90 -15px 15px, #5F369B70 -20px 20px, #5F369B50 -25px 25px, #5F369B30 -30px 30px;
+    --filterImgButton: invert(100);
+    --modeIcon: url("../assets/sun.svg");
+    --noteTextColor: white;
+    --buttonTransitionColor: rgb(151, 145, 192);
+    --buttonPressedColor: #a674f0;
+}
+
+body {
+    background-color: var(--siteColor);
+}
+
+.text-changes {
+    display: block;
+    text-align: right;
+    width: 70%;
+    user-select: none;
+}
+
+.text-styles, .text-positions {
+    display: inline;
+}
+
+.text-changes img {
+    width: 17px;
+    height: 17px;
+    user-select: none;
+    filter: var(--filterImgButton);
+}
+
+
+
+.text-changes button {
+    margin-top: 30px;
+    background-color: var(--buttonColor);
+    border: 0;
+    border-radius: 0;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    outline: 0;
+}
+.text-changes button:hover {
+    background-color: var(--buttonTransitionColor);
+    transition-duration: 0.6s;
+}
+
+.text-box {
+    position: relative;
+    max-width: 40%;
+    height: 420px;
+    max-height: 420px;
+    margin: 20px auto 20px auto;
+    background-color: var(--noteColor);
+    padding: 30px;
+    outline: 0;
+    overflow-y: auto;
+    word-break: keep-all;
+    border-radius: 10px;
+    box-shadow: var(--shadowNote);
+    color: var(--noteTextColor)
+}
+
+.title {
+    position: absolute;
+    background-color: var(--buttonColor);
+    border-radius: 10px 10px 0 0;
+    max-width: 40%;
+    height: 420px;
+    color: var(--noteTextColor)
+}
+
+.pressed-button {
+    background-color: var(--buttonPressedColor);
+    opacity: 0.2;
+}
+
+.change-theme {
+    background: black var(--modeIcon) 5px 4px no-repeat;
+    background-size: 35px 35px;
+    position: fixed;
+    bottom: 0;
+    width: 45px;
+    height: 45px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    outline: 0;
+    border: 0; 
+}
+
+.change-theme:hover {
+    background-color: #3c4042;
+    transition-duration: 0.6s;
+}
